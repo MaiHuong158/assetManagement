@@ -1,5 +1,8 @@
 {% extends "layout.html" %}
 {% block content %}
+<head>
+	<link rel="stylesheet" type="text/css" href="/property_management1/static/askalione-bootstrap-table-filter/assets/css/bootstrap.css">
+</head>
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
@@ -19,9 +22,7 @@
 								<div class ="alert alert-{{ category}}">
 								{{ message }}
 								</div>
-							{% endfor %}
-						{% endif %}
-					{% endwith %}
+							
                     <!-- /.col-lg-12 -->
                     <div class="col-lg-7" style="padding-bottom:120px">
                         <form  action="" method="POST">
