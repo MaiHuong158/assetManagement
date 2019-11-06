@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
 <head>
-	<link rel="stylesheet" type="text/css" href="/property_management1/static/askalione-bootstrap-table-filter/assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/Users/Laptopaz/assetManagement/static/askalione-bootstrap-table-filter/assets/css/bootstrap.css">
 
 </head>
 
@@ -71,7 +71,7 @@
 			$('#dataTables-example thead tr:eq(1) th').each( function (i) {
 				var title = $(this).text();
 			if( title != "Delete" && title !="Edit" && title !="Lend"){
-				$(this).html( '<input style="width:100%; font-size:65%;" type="text" placeholder="Search '+title+'" />' );
+				$(this).html( '<input style="width:100%; font-size:65%" type="text" placeholder="Search '+title+'" />' );
 				}
 			else{
 				$(this).html( '' );
