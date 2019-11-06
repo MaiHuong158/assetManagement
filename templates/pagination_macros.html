@@ -1,52 +1,70 @@
-{% macro render_pagination(pagination, endpoint) %}
+<!--{% macro render_pagination(pagination, endpoint) %}-->
 <head>
-  <link rel="stylesheet" type="text/css" href="/Users/Laptopaz/assetManagement/static/askalione-bootstrap-table-filter/assets/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/assetManagement/static/askalione-bootstrap-table-filter/assets/css/bootstrap.css">
 </head>
 <style>
-  .pagination{
+  div{
     text-align: center;
-    bottom: 0;
   }
-  .pagination ul{
+  ul{
     display: inline-block;
     margin: 0;
     padding: 0;
     *display: inline;
 
   }
-  .pagination li{
-    float: left;
-
+  .img{
+    width: 20%;
+    margin: 40px 40px 100px 40px;
   }
+  
 </style>
-  <ul class="pagination">
+  <div>
+    <div>
+      <div>
+        <a href="#"><img src="/assetManagement/static/upload/images/sua-mui-boc-sun-2.jpg" class="img img-thumbnail"></a>
+        <a href="#"><img src="/assetManagement/static/upload/images/sua-mui-boc-sun-2.jpg" class="img img-thumbnail"></a>
+        <a href="#"><img src="/assetManagement/static/upload/images/sua-mui-boc-sun-2.jpg" class="img img-thumbnail"></a>
+        <a href="#"><img src="/assetManagement/static/upload/images/sua-mui-boc-sun-2.jpg" class="img img-thumbnail"></a>
+      </div>
+      <div>
+        <a href="#"><img src="/assetManagement/static/upload/images/sua-mui-boc-sun-2.jpg" class="img img-thumbnail"></a>
+        <a href="#"><img src="/assetManagement/static/upload/images/sua-mui-boc-sun-2.jpg" class="img img-thumbnail"></a>
+        <a href="#"><img src="/assetManagement/static/upload/images/sua-mui-boc-sun-2.jpg" class="img img-thumbnail"></a>
+        <a href="#"><img src="/assetManagement/static/upload/images/sua-mui-boc-sun-2.jpg" class="img img-thumbnail"></a>
+      </div>
 
-    {% if pagination.has_prev %}
-      <li>
-        <a href="{{ url_for(endpoint, page=pagination.prev_num) }}" aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
-        </a>
-      </li>
-    
-          <li>
-            <a href="{{ url_for(endpoint, page=p) }}">{{ p }}</a>
-          </li>
-     
-          <li class="active">
-            <a href="{{ url_for(endpoint, page=p) }}">{{ p }}</a>
+    </div>
+
+    <ul class="pagination">
+
+      <!--{% if pagination.has_prev %}-->
+        <li>
+          <a href="{{ url_for(endpoint, page=pagination.prev_num) }}" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+      
+            <li>
+              <a href="{{ url_for(endpoint, page=p) }}">{{ p }}</a>
+            </li>
+       
+            <li class="active">
+              <a href="{{ url_for(endpoint, page=p) }}">{{ p }}</a>
+            </li>
+         
+          <li class="disabled">
+            <span class="ellipsis">&hellip;</span>
           </li>
        
-        <li class="disabled">
-          <span class="ellipsis">&hellip;</span>
+        <li>
+          <a href="{{ url_for(endpoint, page=pagination.next_num) }}" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
         </li>
-     
-      <li>
-        <a href="{{ url_for(endpoint, page=pagination.next_num) }}" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-        </a>
-      </li>
-    {% endif %}
+     <!-- {% endif %}-->
 
-  </ul>
+    </ul>
+  </div>
 
-{% endmacro %}
+<!--{% endmacro %}-->
