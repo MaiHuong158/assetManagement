@@ -194,23 +194,32 @@
 		}
 	.image{
 		
-		margin: 80px 0 0px 470px;
+		margin: 80px 0 0px 490px;
 	}
 	.img{
-		margin: 0 53px 100px 0;	
-		width: 21%;
+		margin: 0 55px 100px 0;
+		width: 29%;
+	}
+	a.dropdown-item{
+		color:black;
 	}
 	a.dropdown-item:hover{
 		cursor: pointer;
 		text-decoration:none;
-		background-color: #E0F8F7;
+		background-color: #f5f5f5;
+		color: black;
 	}	
 	.language{
 		position: absolute;
 		margin-top: 10px;
 		right: 100px;
 	}
-	
+	#side-menu{
+		border-right: 1px #e7e7e7 solid;
+	}
+	.nav-second-level{
+		text-align: center;
+	}
 	</style>
 	
 
@@ -233,7 +242,7 @@
             </div>
             <!-- /.navbar-header -->
 			<div class="dropdown language">
-				<button type="button" class="btn btn-secondary	">Language</button><button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">  <i class="fa fa-caret-down"></i></button>
+				<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Language</button><button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">  <i class="fa fa-caret-down"></i></button>
 				<div class="dropdown-menu">
 					<a href="#" class="dropdown-item">VI</a><br>
 					<a href="#" class="dropdown-item">EN</a><br>
@@ -263,7 +272,6 @@
 	                    <ul  class="nav" id="side-menu">
 	                        <li class="sidebar-search">
 	                            <div class="input-group custom-search-form">
-
 	                            </div>
 	                            <!-- /input-group -->
 	                        </li>
@@ -315,7 +323,6 @@
         	<a href="#"><img src="/assetManagement/static/upload/images/do-dung-cong-ty.jpg" class="img img-thumbnail" alt="image1"></a>
         	<a href="#"><img src="/assetManagement/static/upload/images/do-dung-cong-ty.jpg" class="img img-thumbnail" alt="image2"></a>
         	<a href="#"><img src="/assetManagement/static/upload/images/do-dung-cong-ty.jpg" class="img img-thumbnail" alt="image3"></a>
-        	<a href="#"><img src="/assetManagement/static/upload/images/do-dung-cong-ty.jpg" class="img img-thumbnail" alt="image4"></a>
         </div>
 
 	<!--{% block content %}{% endblock %}-->
