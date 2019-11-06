@@ -292,24 +292,32 @@
                 <a class="navbar-brand" href={{url_for('borrow_manage.home')}} ><i class="fa fa-home"></i> HOME</a>
             </div>
             <!-- /.navbar-header -->
-
-
-
-            <ul class="nav navbar-top-links navbar-right">
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li class="divider"></li>
-                        <li><a href={{url_for('auth.logout')}}><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
+			<div class="navbar-fixed-top navbar-left">
+				<ul class="btn btn-secondary dropdown-toggle" type="button">Language</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">VI</a>
+					<a class="dropdown-item" href="#">EN</a>
+					<a class="dropdown-item" href="#">JP</a>
+				</div>
+			</div>
+			
+			<div>
+	            <ul class="nav navbar-top-links navbar-right">
+	                <!-- /.dropdown -->
+	                <li class="dropdown">
+	                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+	                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+	                    </a>
+	                    <ul class="dropdown-menu dropdown-user">
+	                        <li class="divider"></li>
+	                        <li><a href={{url_for('auth.logout')}}><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+	                        </li>
+	                    </ul>
+	                    <!-- /.dropdown-user -->
+	                </li>
+	                <!-- /.dropdown -->
+	            </ul>
+        	</div>
             <!-- /.navbar-top-links -->
 
             <div class="navbar-default sidebar" role="navigation" style="width:170px">

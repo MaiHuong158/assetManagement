@@ -86,9 +86,16 @@ input[type="password"] {
 .eyes-showpassword {
     position: relative;
     display: flex;
+
 }
 
 .fa-eye-slash {
+    position: absolute;
+    margin-left: 90%;
+    padding: 0;
+    bottom: 30px;
+}
+.fa-eye{
     position: absolute;
     margin-left: 90%;
     padding: 0;
