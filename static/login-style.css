@@ -89,13 +89,7 @@ input[type="password"] {
 
 }
 
-.fa-eye-slash {
-    position: absolute;
-    margin-left: 90%;
-    padding: 0;
-    bottom: 30px;
-}
-.fa-eye{
+.fa-eye-slash,.fa-eye {
     position: absolute;
     margin-left: 90%;
     padding: 0;
