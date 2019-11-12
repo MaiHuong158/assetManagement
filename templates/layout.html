@@ -299,7 +299,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li class="divider"></li>
-                        <li><a href="/templates/login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="{{url_for('auth.logout')}}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -320,10 +320,10 @@
 	                            <a href="#"><i class="fa fa-cube fa-fw"></i> Device<span class="fa arrow"></span></a>
 	                            <ul class="nav nav-second-level">
 	                                <li>
-	                                    <a href={{url_for('borrow_manage.home')}}>List Device</a>
+	                                    <a href="{{url_for('borrow_manage.home')}}">List Device</a>
 	                                </li>
 	                                <li>
-	                                    <a href={{url_for('device_mange.DeviceAdd')}}>Add Device</a>
+	                                    <a href="{{url_for('device_mange.DeviceAdd')}}">Add Device</a>
 	                                </li>
 	                            </ul>
 	                            <!-- /.nav-second-level -->
@@ -332,10 +332,10 @@
 	                            <a href="#"><i class="fa fa-users fa-fw"></i> Employee<span class="fa arrow"></span></a>
 	                            <ul class="nav nav-second-level">
 	                                <li>
-	                                    <a href={{url_for('employee_manage.EmployeeList')}}>List Employee</a>
+	                                    <a href="{{url_for('employee_manage.EmployeeList')}}">List Employee</a>
 	                                </li>
 	                                <li>
-	                                    <a href={{url_for('employee_manage.EmployeeAdd')}}>Add Employee</a>
+	                                    <a href="{{url_for('employee_manage.EmployeeAdd')}}">Add Employee</a>
 	                                </li>
 	                            </ul>
 	                            <!-- /.nav-second-level -->
@@ -345,13 +345,13 @@
 	                            <a href="#"><i class="fa fa-clipboard"></i> Record<span class="fa arrow"></span></a>
 	                            <ul class="nav nav-second-level">
 	                                <li>
-	                                    <a href={{url_for('history_api.borrow_list')}}>Borrow List</a>
+	                                    <a href="{{url_for('history_api.borrow_list')}}">Borrow List</a>
 	                                </li>
 	                            </ul>
 	                            <!-- /.nav-second-level -->
 	                        </li>
 							<li>
-	                            <a href={{url_for('log.log_change')}}><i class="fa fa-dashboard fa-fw"></i> Log Change</a>
+	                            <a href="{{url_for('log.log_change')}}"><i class="fa fa-dashboard fa-fw"></i> Log Change</a>
 	                        </li>
 	                    </ul>
 	                </div>
