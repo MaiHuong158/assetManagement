@@ -104,19 +104,23 @@
 			border-left: 1px solid #e7e7e7;
 		}
 	}
-	@media screen and (min-width: 576px){
+	@media screen and (min-width: 600px){
 		#page-wrapper {
 			position: inherit;
 			margin: 0 0 0 100px;
 			padding: 0 20px;
 		}
 		div .image{
-			
-			margin: 80px 0 0px 250px;
+			margin: 280px 30px 0px 30px;
 		}
 		.img{
-			margin: 0 25px 50px 15px;
+			margin: 0 16px 50px 15px;
+			width: 30%;
 		}
+		.language{
+			right:100px;
+		}
+		
 	}
 	@media(min-width: 360px){
 		#page-wrapper {
@@ -144,6 +148,9 @@
 		.img{
 			margin: 0 38px 0px 15px;
 			width: 21%	;
+		}
+		.language{
+			right: 160px;
 		}
 	}
 	td.auto-line-break{
@@ -279,7 +286,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href={{url_for('borrow_manage.home')}} ><i class="fa fa-home"></i> HOME</a>
+                <a class="navbar-brand" href="{{url_for('borrow_manage.home')}}" ><i class="fa fa-home"></i> HOME</a>
             </div>
 			<!-- /.navbar-header -->
 			<div class="dropdown language">
@@ -290,7 +297,7 @@
 						<li><a href="#" class="dropdown-item"><i class="united kingdom flag"></i> 	EN</a></li>
 						<li><a href="#" class="dropdown-item"><i class="japan flag"></i> JP</a></li>
 					</ul>
-				</div>
+			</div>
             <ul class="nav navbar-top-links navbar-right">
                 <!-- /.dropdown -->
                 <li class="dropdown">
