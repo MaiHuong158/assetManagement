@@ -3,9 +3,10 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="/static/askalione-bootstrap-table-filter/assets/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="/static/fontawesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/fontawesome/css/v4-shims.min.css">	
 </head>
 <style>
-	a{
+	a:hover{
 		cursor: pointer;
 	}
 </style>
@@ -53,8 +54,8 @@
                                 <td class="auto-line-break">{{employee.name}}</td>
                                 <td class="auto-line-break">{{employee.identity_card}}</td>
                                 <td class="auto-line-break">{{employee.position}}</td>
-								<td class ="center auto-line-break"><i class="fa fa-history" ></i><a href ={{url_for('history_api.borrow_history', id = employee.id)}}> History </a> </td>
-                               	<td class="center auto-line-break"><i class="fa fa-trash-o  fa-fw"></i><a data-toggle="modal" data-target="#myModal{{ employee.id }}" > Delete</a></td>
+								<td class ="center auto-line-break"><i class="fa fa-history" ></i><a href ={{url_for('history_api.borrow_history', id = employee.id)}}>History </a> </td>
+                               	<td class="center auto-line-break"><i class="fa fa-trash-o  fa-fw"></i><a data-toggle="modal" data-target="#myModal{{ employee.id }}" >Delete</a></td>
 								<div class="modal fade" id="myModal{{employee.id}}" role="dialog">
 								<div class="modal-dialog modal-dialog-centered" role="document">
 								
