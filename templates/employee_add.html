@@ -22,7 +22,11 @@
 							{% for category, message in messages %}
 								<div class ="alert alert-{{ category}}">
 								{{ message }}
-								</div>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+
 							
                     <!-- /.col-lg-12 -->
                     <div class="col-lg-7" style="padding-bottom:120px">
@@ -68,4 +72,5 @@
             <!-- /.container-fluid -->
         </div>
         <!-- /#page-wrapper -->
-{% endblock %}
+ {% endblock %}
+
