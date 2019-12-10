@@ -4012,7 +4012,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .nav-divider {
   height: 1px;
   margin: 9px 0;
-  
+  overflow: hidden;
   background-color: #e5e5e5;
 }
 .nav > li > a > img {
@@ -6569,9 +6569,6 @@ button.close {
 .visible-lg-inline,
 .visible-lg-inline-block {
   display: none !important;
-}
-.dropdown-content{
-  display: none;
 }
 @media (max-width: 767px) {
   .visible-xs {

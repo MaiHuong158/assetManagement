@@ -1,4 +1,4 @@
- <head>
+<head>
 	<title>Log In</title>
 	<link rel="stylesheet" href="/static/fontawesome/css/all.min.css" type="text/css">
 	<link rel="stylesheet" href="/static/fontawesome/css/solid.min.css" type="text/css">
@@ -23,8 +23,16 @@
 		</form>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script>
+<!--		$(document).ready(function(){-->
+<!--			$("i").click(showPassword1){-->
+<!--				$("")-->
+<!--			}-->
+<!--		})-->
+
+
+
 		function showPassword1(){
-			var x=document.getElementById("passw");
+		var x=document.getElementById("passw");
 		if(x.type==="password"){
 			x.type="text";
 		}
@@ -37,7 +45,6 @@
 			x.classList.toggle("fa-eye");
 			x.classList.toggle("fa-eye-slash");
 		}
-		
 		</script>
 	</div>
 </body>

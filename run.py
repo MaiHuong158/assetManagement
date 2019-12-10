@@ -9,8 +9,8 @@ from api.export import app as export
 from api.log import app as log
 
 app = Flask(__name__)
-app.config.from_pyfile('config.py')
 db.init_app(app)
+app.config.from_pyfile('config.py')
 
 app.register_blueprint(history_api)
 app.register_blueprint(employee_mangage)

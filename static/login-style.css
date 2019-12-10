@@ -6,7 +6,7 @@
 }
 
 body {
-    background: url(/static/img/login-background.jpg);  
+    background: url(/static/img/login-background.jpg);
     background-size: cover;
 
 }
@@ -86,10 +86,9 @@ input[type="password"] {
 .eyes-showpassword {
     position: relative;
     display: flex;
-
 }
 
-.fa-eye-slash,.fa-eye {
+.fa-eye-slash {
     position: absolute;
     margin-left: 90%;
     padding: 0;

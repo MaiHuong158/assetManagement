@@ -1,12 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<head>
-	<link rel="stylesheet" type="text/css" href="/static/askalione-bootstrap-table-filter/assets/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="/static/fontawesome/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="/static/fontawesome/css/v4-shims.min.css">	
-</head>
 <style>
-	a:hover{
+	a{
 		cursor: pointer;
 	}
 </style>
@@ -37,25 +32,25 @@
 					</div>
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
-                            <tr>
-                                <td><b>ID</b></td>
-                                <td><b>Name</b></td>
-                                <td><b>identity_card</b></td>
-                                <td><b>position</b></td>
-								<td><b>Borrow history</b></td>
-                                <td><b>Delete</b></td>
-                                <td><b>Edit</b></td>
+                            <tr align="center">
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>identity_card</th>
+                                <th>position</th>
+								<th>Borrow history</th>
+                                <th>Delete</th>
+                                <th>Edit</th>
                             </tr>
                         </thead>
                         <tbody>
 							{% for employee in employees %}
-                            <tr class="odd gradeX">
+                            <tr class="odd gradeX" align="center">
                                 <td class="auto-line-break">{{employee.id}}</td>
                                 <td class="auto-line-break">{{employee.name}}</td>
                                 <td class="auto-line-break">{{employee.identity_card}}</td>
                                 <td class="auto-line-break">{{employee.position}}</td>
-								<td class ="center auto-line-break"><i class="fa fa-history" ></i><a href ="{{url_for('history_api.borrow_history', id = employee.id)}}">History </a> </td>
-                               	<td class="center auto-line-break"><i class="fa fa-trash-o  fa-fw"></i><a data-toggle="modal" data-target="#myModal{{ employee.id }}" >Delete</a></td>
+								<td class ="center auto-line-break"><i class="fa fa-history" ></i><a href ={{url_for('history_api.borrow_history', id = employee.id)}}> History </a> </td>
+                               	<td class="center auto-line-break"><i class="fa fa-trash-o  fa-fw"></i><a data-toggle="modal" data-target="#myModal{{ employee.id }}" > Delete</a></td>
 								<div class="modal fade" id="myModal{{employee.id}}" role="dialog">
 								<div class="modal-dialog modal-dialog-centered" role="document">
 								
@@ -81,7 +76,7 @@
 								  
 								</div>
 								</div>
-                                <td class="center auto-line-break"><i class="fa fa-pencil fa-fw"></i> <a href="{{url_for('employee_manage.EmployeeEdit', id = employee.id )}}">Edit</a></td>
+                                <td class="center auto-line-break"><i class="fa fa-pencil fa-fw"></i> <a href={{url_for('employee_manage.EmployeeEdit', id = employee.id )}}>Edit</a></td>
                             </tr>
 							{% endfor %}
 
@@ -99,13 +94,13 @@
 {% endblock %}
 {% block subscribe_script %}
 			    $(document).ready(function() {
-
+/*
 			// Setup - add a text input to each footer cell
 			$('#dataTables-example thead tr').clone(true).appendTo( '#dataTables-example thead' );
 			$('#dataTables-example thead tr:eq(1) th').each( function (i) {
 				var title = $(this).text();
 			if( title != "Delete" && title !="Edit" && title !="Borrow history"){
-				$(this).html( '<input style="width:100%; font-size:100%;" type="text" placeholder="Search '+title+'" />' );
+				$(this).html( '<input style="width:100%; font-size:65%;" type="text" placeholder="Search '+title+'" />' );
 				}
 			else{
 				$(this).html( '' );
@@ -120,7 +115,7 @@
 				}
 			} );
 		} );	
-
+*/
 		   var table = $('#dataTables-example').DataTable({
 
 				searchPane: {
@@ -133,7 +128,7 @@
 				orderCellsTop: true,
 				"dom" : '<<"toolbar">f<"row"<"col-md-10"t<ip>><"col-md-2">>>',
 				initComplete: function(){
-					$("div.toolbar").html('  <a href="{{url_for('employee_manage.EmployeeAdd')}}" class="btn btn-primary" role="button"><i class="fa fa-plus-circle"></i> Add Employee</a>');
+					$("div.toolbar").html('  <a href={{url_for('employee_manage.EmployeeAdd')}} class="btn btn-primary" role="button"><i class="fa fa-plus-circle"></i> Add Employee</a>');
 		   }  
 		   
 

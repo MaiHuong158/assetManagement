@@ -10,7 +10,6 @@ body {
 
 #wrapper {
     width: 100%;
-    
 }
 
 #page-wrapper {
@@ -19,7 +18,14 @@ body {
     background-color: #fff;
 }
 
-
+@media(min-width:768px) {
+    #page-wrapper {
+        position: inherit;
+        margin: 0 0 0 200px;
+        padding: 0 30px;
+        border-left: 1px solid #e7e7e7;
+    }
+}
 
 .navbar-top-links {
     margin-right: 0;
@@ -123,9 +129,9 @@ body {
 
 @media(min-width:768px) {
     .sidebar {
-        z-index: -1;
+        z-index: 1;
         position: absolute;
-        width: 490px;
+        width: 250px;
         margin-top: 51px;
     }
 
